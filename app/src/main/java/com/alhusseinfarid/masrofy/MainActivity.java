@@ -2,6 +2,7 @@ package com.alhusseinfarid.masrofy;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -14,6 +15,8 @@ public class MainActivity extends Activity {
   @SuppressLint("SetJavaScriptEnabled")
   @Override public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    getWindow().setNavigationBarColor(Color.WHITE);
+    getWindow().setStatusBarColor(Color.rgb(23,25,35));
     webView = new WebView(this);
     setContentView(webView);
     WebSettings s = webView.getSettings();
